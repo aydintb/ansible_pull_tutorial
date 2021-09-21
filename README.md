@@ -29,4 +29,13 @@ ansible all -m gather_facts --limit 192.168.116.128
 
 ansible all -m apt -a update_cache=true --become --ask-become-pass
 
+commands similar to the "update_cache" are listed in the web page:
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+
+install a package to all our servers with one command:
+ansible all -m apt -a name=vim-nox --become --ask-become-pass
+
+
+
+
 
