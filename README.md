@@ -1,4 +1,2 @@
-Hello, 
-
-this is created in ubuntu linux.
+Hello, created in linux.
 
