@@ -30,11 +30,11 @@
     dnf:
       name: httpd
       state: latest
-    when: ansible_distribution = "CentOSn"
+    when: ansible_distribution == "CentOSn"
 
   - name: add php support for apache
     dnf:
       name: php
       state: latest
-    when: ansible_distribution = "CentOS"
+    when: ansible_distribution == "CentOS"
 

@@ -53,6 +53,9 @@ ansible-playbook --ask-become-pass install_apache.yml
 
 ansible all -m gather_facts --limit 192.168.116.128 | grep ansible_distribution
 
+#if we need to add firewall on CentOS
+
+sudo firewall-cmd --add-port=80/tcp
 
 
 
