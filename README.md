@@ -36,7 +36,15 @@ install a package to all our servers with one command:
 
 ansible all -m apt -a name=vim-nox --become --ask-become-pass
 
+lastes version of snapd:
+
 ansible all -m apt -a "name=snapd state=latest" --become --ask-become-pass
+
+
+update all upgrades:
+
+ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
+
 
 
 
