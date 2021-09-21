@@ -4,3 +4,4 @@ to run this ansible:
 
 
  ansible all --key-file ~/.ssh/ansible -i -m ping
+ # ping creates connection, not a tcp ping.
