@@ -46,6 +46,10 @@ update all upgrades:
 ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
 
 
+install apache:
+
+ansible-playbook --ask-become-pass install_apache.yml
+
 
 
 
