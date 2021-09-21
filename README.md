@@ -27,6 +27,6 @@ ansible all -m gather_facts
 
 ansible all -m gather_facts --limit 192.168.116.128
 
-ansible all -m apt -a update_cache=true --become --ask-come-pass
+ansible all -m apt -a update_cache=true --become --ask-become-pass
 
 
