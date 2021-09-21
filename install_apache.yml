@@ -7,7 +7,7 @@
   - name: update repository index
     apt:
       update_cache: yes
-    when: ansible_distribution in ["Debian", "Ubuntu"]
+    when: ansible_distribution in ["Debian", "Ubuntu"] and ansible_distribution_version: "20.04"
 
   - name: install apache2 package
     apt:
@@ -21,5 +21,20 @@
       state: latest
     when: ansible_distribution in ["Debian", "Ubuntu"]
 
+  - name: update repository index
+    dnf:
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
 
+  - name: install apache2 package
+    dnf:
+      name: httpd
+      state: latest
+    when: ansible_distribution = "CentOSn"
+
+  - name: add php support for apache
+    dnf:
+      name: php
+      state: latest
+    when: ansible_distribution = "CentOS"
 
