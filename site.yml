@@ -2,7 +2,7 @@
 
 - hosts: all
   become: true
-  tasks:
+  pre_tasks:
 
   - name: install updates (CentOS)
     package:
@@ -36,3 +36,20 @@
         - php
       state: latest
     when: ansible_distribution == "CentOSn"
+
+- hosts: db_servers
+  become: true
+  tasks:
+
+  - name: install mariadb package (CentOS)
+    dnf:
+      name: mariadb
+      state: latest
+    when ansible_distribution == "CentOS"
+
+  - name: install mariadb package (Ubuntu)
+    dnf:
+      name: mariadb-server
+      state: latest
+    when ansible_distribution == "Ubuntu"
+
