@@ -51,6 +51,8 @@ install apache:
 ansible-playbook --ask-become-pass install_apache.yml
 
 
+ansible all -m gather_facts --limit 192.168.116.128 | grep ansible_distribution
+
 
 
 
