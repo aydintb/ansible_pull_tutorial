@@ -8,13 +8,17 @@ ssh-keygen -t ed25519 -C "ansible"
    (do not use a passphrase)
 
 
+ssh-copy-id -i ~/.ssh/ansible.pub 192.168.116.128
+
+
 to run this ansible:
 
 /usr/bin/ansible-pull -U https://github.com/aydintb/ansible_pull_tutorial.git
 
 
+
 ansible all --key-file ~/.ssh/ansible -i -m ping
-# ping creates connection, not a tcp ping.
+
 
 # after creating ansible.cfg:
 ansible all -m ping
