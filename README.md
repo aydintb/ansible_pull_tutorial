@@ -59,5 +59,5 @@ ansible all -m gather_facts --limit 192.168.116.128 | grep ansible_distribution
 
 sudo firewall-cmd --add-port=80/tcp
 
-
+ansible-playbook --ask-become-pass site.yml
 
