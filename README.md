@@ -2,6 +2,20 @@ sudo crontab -u ansible -e
 cat /var/log/syslog | grep CRON
 
 
+/usr/bin/ansible-pull --vault-password-file ~/.vault_key -U https://github.com/aydintb/ansible_pull_tutorial.git
+
+
+change password:
+
+ansible-vault rekey files/sudoers_ansible --vault-password-file ~/.vault_key
+
+scp new password to all servers
+
+=================
+
+
+
+
 ssh-keygen -t ed25519 -C "this is a comment"
 ssh-copy-id -i ~/.ssh/id_ed25519.pub 172.16.250.132
 ssh 172.16.250.132
