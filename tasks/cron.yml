@@ -3,5 +3,5 @@
     user: ansible
     name: "ansible provision"
     minute: "*/10"
-    job: "/usr/bin/ansible-pull -o -U https://github.com/aydintb/ansible_pull_tutorial.git > /dev/null"
+    job: "/usr/bin/ansible-pull --vault-password-file ~/.vault_key -o -U https://github.com/aydintb/ansible_pull_tutorial.git > /dev/null"
 
