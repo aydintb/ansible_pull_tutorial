@@ -1,3 +1,6 @@
+sudo crontab -u ansible -e
+cat /var/log/syslog | grep CRON
+
 
 ssh-keygen -t ed25519 -C "this is a comment"
 ssh-copy-id -i ~/.ssh/id_ed25519.pub 172.16.250.132
