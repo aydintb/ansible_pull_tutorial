@@ -61,3 +61,13 @@ sudo firewall-cmd --add-port=80/tcp
 
 ansible-playbook --ask-become-pass site.yml
 
+list used tags:
+
+ansible-playbook --list-tags site.yml
+
+use yml with tags:
+
+ansible-playbook --tags centos --ask-become-pass site.yml
+
+ansible-playbook --tags "apache,db" --ask-become-pass site.yml
+
