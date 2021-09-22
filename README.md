@@ -36,6 +36,40 @@ ansible all -m gather_facts --limit 192.168.116.128
 
 ansible all -m apt -a update_cache=true --become --ask-become-pass
 
+---------------- encrpt files -------------
+
+ansible-vault encrypt --vault-password-file ~/.vault_key sudoers_ansible
+
+------------------
+
+bir ust folder'da github'a aktarilmayacak sekilde
+.vault_key file icinde password olacak.
+chmod 600 ~/.vault_key
+# now only the owner has access to this file, noone else can read or write
+
+
+#random text file to encrypt
+nano info.txt
+
+ansible-vault encrypt info.txt
+
+New Vault password:
+Confirm New Vault password:
+
+ansible-vault decrypt --vault-password-file ~/.vault_key info.txt
+
+Decryption successful
+
+atb@u20043:~/ansible_pull_tutorial$ cat info.txt
+
+
+ansible-vault edit --vault-password-file ~/.vault_key info.txt
+
+ansible-vault view --vault-password-file ~/.vault_key info.txt
+
+
+---------------------------------------------
+
 
 - hosts: host2
   tasks:
