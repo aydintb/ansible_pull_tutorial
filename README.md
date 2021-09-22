@@ -65,7 +65,11 @@ list used tags:
 
 ansible-playbook --list-tags site.yml
 
+
+
 use yml with tags:
+
+ansible-playbook --tags apache --ask-become-pass site.yml
 
 ansible-playbook --tags centos --ask-become-pass site.yml
 
