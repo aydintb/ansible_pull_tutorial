@@ -11,6 +11,10 @@ ssh-keygen -t ed25519 -C "ansible"
 ssh-copy-id -i ~/.ssh/ansible.pub 192.168.116.128
 
 
+#sudo nano /etc/ansible/hosts
+localhost ansible_connection=local
+
+
 to run this ansible:
 
 /usr/bin/ansible-pull -U https://github.com/aydintb/ansible_pull_tutorial.git
