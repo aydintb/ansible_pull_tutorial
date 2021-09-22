@@ -29,6 +29,12 @@ ansible all -m gather_facts --limit 192.168.116.128
 
 ansible all -m apt -a update_cache=true --become --ask-become-pass
 
+
+- hosts: host2
+  tasks:
+    - shell: echo "hello world 2"
+
+
 commands similar to the "update_cache" are listed in the web page:
 https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
 
