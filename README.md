@@ -71,3 +71,6 @@ ansible-playbook --tags centos --ask-become-pass site.yml
 
 ansible-playbook --tags "apache,db" --ask-become-pass site.yml
 
+
+managing files:
+
