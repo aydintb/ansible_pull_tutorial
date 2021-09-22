@@ -14,7 +14,7 @@
     apt:
       upgrade: dist
       update_cache: yes
-   when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
 
 
 - hosts: web_servers
@@ -45,13 +45,13 @@
     dnf:
       name: mariadb
       state: latest
-    when ansible_distribution == "CentOS"
+    when: ansible_distribution == "CentOS"
 
   - name: install mariadb package (Ubuntu)
     dnf:
       name: mariadb-server
       state: latest
-    when ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
 
 - hosts: file_servers
   become: true
