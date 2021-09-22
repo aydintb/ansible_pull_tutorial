@@ -40,6 +40,20 @@ ansible all -m apt -a update_cache=true --become --ask-become-pass
 
 ansible-vault encrypt --vault-password-file ~/.vault_key sudoers_ansible
 
+this will fail:
+
+/usr/bin/ansible-pull -U https://github.com/aydintb/ansible_pull_tutorial.git
+
+
+# copy the key to the server, so it can decrypt
+
+scp /home/atb/.vault_key 172.16.250.133:
+
+
+/usr/bin/ansible-pull --vault-password-file ~/.vault_key -U https://github.com/aydintb/ansible_pull_tutorial.git
+
+
+
 ------------------
 
 bir ust folder'da github'a aktarilmayacak sekilde
