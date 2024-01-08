@@ -1,8 +1,7 @@
-# Ansible Pull tutorial
-# gpg in use 1
+# Ansible Pull
 
-![Ansible Logo](https://www.learnlinux.tv/wp-content/uploads/2020/12/ansible-e1607524003363.png)
+```bash
 
-This repository was used for the Ansible Pull tutorial from the LearnLinux.TV YouTube channel.
+ansible-pull -o -U https://github.com/aydintb/ansible_pull_tutorial.git
 
-You can view the original video for this repository [here](https://youtu.be/sn1HQq_GFNE).
+```
